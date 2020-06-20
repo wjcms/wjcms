@@ -6,7 +6,7 @@
         "wjcms",
         "laravel"
     ],
-    "license": "Apache Licene 2.0",
+    "license": "MIT",
     "require": {
         "php": "^7.2.5",
         "caouecs/laravel-lang": "~6.0",
