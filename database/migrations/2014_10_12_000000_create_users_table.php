@@ -15,8 +15,13 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
+            $table->string('name')->unique()->comment('昵称');
+            $table->string('email')->unique()->nullable()->comment('邮箱');
+            $table->string('mobile')->unique()->nullable()->comment('电话');
+            $table->string('github')->nullable()->comment('GITHUB账号');
+            $table->string('qq')->nullable()->comment('qq账号');
+            $table->string('weibo')->nullable()->comment('weibo账号');
+            $table->string('avatar')->nullable()->comment('头像');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
